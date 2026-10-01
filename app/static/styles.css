@@ -67,7 +67,10 @@ textarea { resize: vertical; }
 
 .controls { display: flex; gap: 14px; margin-top: 16px; flex-wrap: wrap; }
 .controls > div { flex: 0 0 auto; width: 120px; }
+.controls > div.narrow { width: 90px; }
+.controls > div.voice { width: 200px; }
 .controls > div.grow { flex: 1 1 220px; width: auto; }
+.controls select { text-overflow: ellipsis; }
 
 button, .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
@@ -114,9 +117,9 @@ button:disabled { opacity: .55; cursor: not-allowed; transform: none; }
 .publish ol { margin: 8px 0 0; padding-left: 20px; color: var(--muted); }
 .publish .note { color: var(--muted); font-size: 12px; margin-top: 10px; }
 
-footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 30px; }
+footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); }
 
 @media (max-width: 560px) {
-  .controls > div, .controls > div.grow { width: 100%; flex-basis: 100%; }
+  .controls > div, .controls > div.narrow, .controls > div.voice, .controls > div.grow { width: 100%; flex-basis: 100%; }
 }
 
